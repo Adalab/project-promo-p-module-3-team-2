@@ -8,7 +8,6 @@ import iconShare from '../images/share-nodes-solid.svg';
 function App() {
   return (
     <>
-      {' '}
       <main className='main__container'>
         <img className='main__logo' src={logoAwesome} alt='Logo' title='logo' />
         <h1 className='main__title'>Crea tu tarjeta de visita</h1>

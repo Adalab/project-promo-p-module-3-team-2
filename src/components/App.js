@@ -1,4 +1,6 @@
 import '../styles/App.scss';
+import logoAwesome from '../images/awesome.svg';
+import logo from '../images/logo_ninfas.png';
 
 function App() {
   return (
@@ -7,7 +9,7 @@ function App() {
         <a href='index.html' rel='noreferrer'>
           <img
             className='header__logo'
-            src='./assets/images/awesome.svg'
+            src={logoAwesome}
             alt='tarjetas molonas'
             title='logotipo awesome'
           />
@@ -339,7 +341,7 @@ function App() {
         <a href='http://adalab.es' target='_blank' rel='noreferrer'>
           <img
             className='footer__logo'
-            src='./assets/images/logo_ninfas.png'
+            src={logo}
             alt='Logo Ninfas'
             title='Logo Equipo Ninfas'
           />
