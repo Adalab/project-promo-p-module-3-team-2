@@ -1,0 +1,114 @@
+.thirdFieldset {
+  display: flex;
+  flex-direction: column;
+  width: 281px;
+  position: relative;
+  padding: 13px 0 30px 0;
+  margin: 0 20px 0 20px;
+  border-top: $white;
+  border-right: $white;
+  border-left: $white;
+  border-bottom: 1px solid $white-two;
+  .creating {
+    background-color: $white;
+    border: 0;
+  }
+  @media all and (min-width: 768px) {
+    width: 329px;
+  }
+  &__legend {
+    font-family: $OpenSansRegular;
+    font-weight: 600;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $gunmetal;
+    width: 281px;
+    display: flex;
+    justify-content: flex-start;
+  }
+  &__button {
+    height: 50px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.32);
+    background-color: $dull-orange;
+    color: $white-three;
+    font-size: 18px;
+    font-weight: 600;
+    font-family: $OpenSansRegular;
+    text-align: center;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    padding: 13px 18px 13px 17px;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+.fa-share-nodes {
+  color: $dull-orange;
+  margin-right: 10px;
+  width: 16px;
+  height: 18px;
+}
+.fa-address-card {
+  color: $white-three;
+  width: 25px;
+  height: 22px;
+  margin-right: 10px;
+  font-size: 22px;
+}
+.fourFieldset {
+  margin: 0 20px 0 20px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-top: $white;
+  border-right: $white;
+  border-left: $white;
+  border-bottom: 1px solid $white-three;
+  padding: 20px 15px 30px 15px;
+
+  @media all and (min-width: 768px) {
+    width: 329px;
+  }
+  &__title {
+    color: $gunmetal;
+    font-size: 18px;
+    font-family: $OpenSansRegular;
+    font-weight: 600;
+    margin: 0 14px 5px 10px;
+    text-align: center;
+  }
+  &__link {
+    color: $dull-orange;
+    font-family: OpenSans;
+    font-size: 12px;
+    font-weight: 600;
+  }
+  &__button {
+    width: 181px;
+    height: 30px;
+    padding: 3px 9px 6px 0;
+    background-color: $azure;
+    color: $white-three;
+    font-family: OpenSans;
+    font-size: 14px;
+    margin: 10px auto;
+    border-radius: 3px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+}
+.fa-twitter {
+  width: 18px;
+  height: 18px;
+  margin: 3px 9.5px 0 0;
+  font-size: 18px;
+}

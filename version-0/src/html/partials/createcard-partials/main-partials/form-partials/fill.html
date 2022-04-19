@@ -1,0 +1,90 @@
+<fieldset class="secondFieldset">
+  <h3 class="secondFieldset__legend js-titleFill" id="fill">
+    <i class="fa-solid fa-keyboard icon"></i>Rellena
+    <i class="fa-solid fa-angle-up js-angleFill rotate"></i>
+  </h3>
+  <div class="js-secondFieldset collapsed">
+    <label for="completeName" class="secondFieldset__label"
+      >Nombre completo</label
+    >
+    <input
+      id="completeName"
+      type="text"
+      name="Complete Name"
+      placeholder="Ej:Sally Jill"
+      class="secondFieldset__input js-name js-input"
+      required
+      value=""
+    />
+    <label for="marketStall" class="secondFieldset__label">Puesto</label>
+    <input
+      id="marketStall"
+      type="text"
+      name="Market Stall"
+      placeholder="Ej:front-end unicorn"
+      class="secondFieldset__input js-job js-input"
+      required
+      value=""
+    />
+    <label for="addimage" class="secondFieldset__label">Imagen de perfil</label>
+    <div class="secondFieldset__buttoncontainer">
+      <!--<button
+        id="addimage"
+        type="submit"
+        value="Añadir imagen"
+        class="secondFieldset__button js-secondFieldset__button js__profile-upload-btn"
+        required
+      >
+        Añadir imagen
+      </button>-->
+      <label
+        for="photo"
+        class="label secondFieldset__button js__profile-trigger"
+        >Añadir imagen</label
+      >
+      <input
+        id="photo"
+        type="file"
+        class="input js-input js__profile-upload-btn"
+      />
+
+      <div type="text" class="square js__profile-preview"></div>
+    </div>
+    <label for="addemail" class="secondFieldset__label">Email</label>
+    <input
+      id="addemail"
+      type="email"
+      name="add email"
+      placeholder="Ej: sally-hill@gmail.com"
+      class="secondFieldset__input js-addemail js-input"
+      required
+    />
+    <label for="addphone" class="secondFieldset__label">Teléfono</label>
+    <input
+      id="addphone"
+      type="text"
+      name="add phone"
+      placeholder="Ej: 555-55-55-55"
+      class="secondFieldset__input js-addPhone js-input"
+      required
+    />
+    <label for="addLinkedin" class="secondFieldset__label">Linkedin</label>
+    <input
+      id="addLinkedin"
+      type="text"
+      name="add Linkedin"
+      placeholder="Ej:linkedin.com/in/sally.hill"
+      class="secondFieldset__input js-addLinkedin js-input"
+      required
+    />
+    <label for="addGithub" class="secondFieldset__label">Github</label>
+    <input
+      id="addGithub"
+      type="text"
+      name="add Github"
+      placeholder="Ej: @sally-hill"
+      class="secondFieldset__input js-addGithub js-input"
+      required
+    />
+  </div>
+</fieldset>

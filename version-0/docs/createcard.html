@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="./assets/images/address-card-solid.svg" />
+  <title>Create a card</title>
+  <script src="https://kit.fontawesome.com/b79a8cfd22.js" crossorigin="anonymous"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Merriweather:wght@900&family=Montserrat&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="./assets/css/main.css" />
+</head>
+
+<body>
+  <header class="header">
+    <a href="index.html">
+      <img class="header__logo" src="./assets/images/awesome.svg" alt="tarjetas molonas" title="logotipo awesome" />
+    </a>
+  </header>
+  <div class="mainCreate__container">
+    <section class="container__preview">
+      <div class="card__container">
+        <button class="card__reset js-reset" href="#">
+          <i class="far fa-trash-alt"></i> reset
+        </button>
+        <div class="card js-preview">
+          <div class="card__personalInfo personalInfoBorderPalette1 js-borde">
+            <p
+              class="card__personalInfo--name js-personalName personalInfoNamePalette1"
+            >
+              Nombre Apellido
+            </p>
+            <p class="card__personalInfo--job js-cardJob">Front-End developer</p>
+          </div>
+          <div class="card__image js__profile-image"></div>
+          <nav class="card__socialInfo">
+            <ul class="card__socialMenu">
+              <li class="card__rrss">
+                <a
+                  class="card__rrss--item rrssPalette1 js-border1 js-iconPhone"
+                  href=""
+                  target="_blank"
+                  title="phone number"
+                  ><i class="icon fas fa-mobile-alt js-icon1"></i>
+                </a>
+              </li>
+              <li class="card__rrss">
+                <a
+                  class="card__rrss--item rrssPalette1 js-border2 js-iconEmail"
+                  href=""
+                  target="_blank"
+                  title="email address"
+                  ><i class="icon far fa-envelope js-icon2"></i>
+                </a>
+              </li>
+              <li class="card__rrss">
+                <a
+                  class="card__rrss--item rrssPalette1 js-border3 js-iconLinkedin"
+                  href=""
+                  target="_blank"
+                  title="linkedin"
+                  ><i class="icon fab fa-linkedin-in js-icon3"></i>
+                </a>
+              </li>
+              <li class="card__rrss">
+                <a
+                  class="card__rrss--item rrssPalette1 js-border4 js-iconGithub"
+                  href=""
+                  target="_blank"
+                  title="github"
+                  ><i class="icon fab fa-github-alt js-icon4"></i>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </section>
+
+    <form action="/signup" method="post" class="form js-form" id="myform">
+      <fieldset class="container-desing">
+        <legend class="legend js-titleDesign" id="design">
+          <h2 class="title-design">
+            <i class="far fa-object-ungroup"></i>Diseña
+            <i class="fa-solid fa-angle-up js-angleDesign"></i>
+
+            <!--<i class="fas fa-chevron-up js-angleDesign"></i>-->
+          </h2>
+        </legend>
+        <section class="container-colors js-firstFieldset">
+          <p class="paragraph">colores</p>
+          <div class="colors">
+            <div class="design-option">
+              <input
+                class="input js-input1 design-input js_radio"
+                type="radio"
+                id="palette-1"
+                name="palette"
+                value="1"
+              />
+              <label for="palette1">
+                <ul class="design-list">
+                  <li class="squad1"></li>
+                  <li class="squad2"></li>
+                  <li class="squad3"></li>
+                </ul>
+              </label>
+            </div>
+            <div class="design-option">
+              <input
+                class="input js-input2 design-input js_radio"
+                type="radio"
+                id="palette-2"
+                name="palette"
+                value="2"
+              />
+              <label for="palette2">
+                <ul class="design-list">
+                  <li class="squad1-1"></li>
+                  <li class="squad2-2"></li>
+                  <li class="squad3-3"></li>
+                </ul>
+              </label>
+            </div>
+            <div class="design-option">
+              <input
+                class="input js-input3 design-input js_radio"
+                type="radio"
+                id="palette-3"
+                name="palette"
+                value="3"
+              />
+              <label for="palette3">
+                <ul class="design-list">
+                  <li class="squad1-1-1"></li>
+                  <li class="squad2-2-2"></li>
+                  <li class="squad3-3-3"></li>
+                </ul>
+              </label>
+            </div>
+            <div class="design-option">
+              <input
+                class="input js-input4 design-input js_radio"
+                type="radio"
+                id="palette-4"
+                name="palette"
+                value="4"
+              />
+              <label for="palette4">
+                <ul class="design-list">
+                  <li class="squad1-4"></li>
+                  <li class="squad2-4"></li>
+                  <li class="squad3-4"></li>
+                </ul>
+              </label>
+            </div>
+            <div class="design-option">
+              <input
+                class="input js-input5 design-input js_radio"
+                type="radio"
+                id="palette-5"
+                name="palette"
+                value="5"
+              />
+              <label for="palette5">
+                <ul class="design-list">
+                  <li class="squad1-5"></li>
+                  <li class="squad2-5"></li>
+                  <li class="squad3-5"></li>
+                </ul>
+              </label>
+            </div>
+            <div class="design-option">
+              <input
+                class="input js-input6 design-input js_radio"
+                type="radio"
+                id="palette-6"
+                name="palette"
+                value="6"
+              />
+              <label for="palette6">
+                <ul class="design-list">
+                  <li class="squad1-6"></li>
+                  <li class="squad2-6"></li>
+                  <li class="squad3-6"></li>
+                </ul>
+              </label>
+            </div>
+          </div>
+        </section>
+      </fieldset>
+
+      <fieldset class="secondFieldset">
+        <h3 class="secondFieldset__legend js-titleFill" id="fill">
+          <i class="fa-solid fa-keyboard icon"></i>Rellena
+          <i class="fa-solid fa-angle-up js-angleFill rotate"></i>
+        </h3>
+        <div class="js-secondFieldset collapsed">
+          <label for="completeName" class="secondFieldset__label"
+            >Nombre completo</label
+          >
+          <input
+            id="completeName"
+            type="text"
+            name="Complete Name"
+            placeholder="Ej:Sally Jill"
+            class="secondFieldset__input js-name js-input"
+            required
+            value=""
+          />
+          <label for="marketStall" class="secondFieldset__label">Puesto</label>
+          <input
+            id="marketStall"
+            type="text"
+            name="Market Stall"
+            placeholder="Ej:front-end unicorn"
+            class="secondFieldset__input js-job js-input"
+            required
+            value=""
+          />
+          <label for="addimage" class="secondFieldset__label">Imagen de perfil</label>
+          <div class="secondFieldset__buttoncontainer">
+            <!--<button
+              id="addimage"
+              type="submit"
+              value="Añadir imagen"
+              class="secondFieldset__button js-secondFieldset__button js__profile-upload-btn"
+              required
+            >
+              Añadir imagen
+            </button>-->
+            <label
+              for="photo"
+              class="label secondFieldset__button js__profile-trigger"
+              >Añadir imagen</label
+            >
+            <input
+              id="photo"
+              type="file"
+              class="input js-input js__profile-upload-btn"
+            />
+
+            <div type="text" class="square js__profile-preview"></div>
+          </div>
+          <label for="addemail" class="secondFieldset__label">Email</label>
+          <input
+            id="addemail"
+            type="email"
+            name="add email"
+            placeholder="Ej: sally-hill@gmail.com"
+            class="secondFieldset__input js-addemail js-input"
+            required
+          />
+          <label for="addphone" class="secondFieldset__label">Teléfono</label>
+          <input
+            id="addphone"
+            type="text"
+            name="add phone"
+            placeholder="Ej: 555-55-55-55"
+            class="secondFieldset__input js-addPhone js-input"
+            required
+          />
+          <label for="addLinkedin" class="secondFieldset__label">Linkedin</label>
+          <input
+            id="addLinkedin"
+            type="text"
+            name="add Linkedin"
+            placeholder="Ej:linkedin.com/in/sally.hill"
+            class="secondFieldset__input js-addLinkedin js-input"
+            required
+          />
+          <label for="addGithub" class="secondFieldset__label">Github</label>
+          <input
+            id="addGithub"
+            type="text"
+            name="add Github"
+            placeholder="Ej: @sally-hill"
+            class="secondFieldset__input js-addGithub js-input"
+            required
+          />
+        </div>
+      </fieldset>
+
+      <fieldset class="thirdFieldset">
+        <h3 class="thirdFieldset__legend js-titleShare" id="share">
+          <i class="fa-solid fa-share-nodes"></i>Comparte<i
+            class="fa-solid fa-angle-up js-angleShare rotate"
+          ></i>
+        </h3>
+        <div class="js-thirdFieldset collapsed">
+          <button
+            class="thirdFieldset__button js-thirdFieldset__button js_create_button"
+            title="Crear tarjeta"
+          >
+            <i class="fa-regular fa-address-card"></i>Crear tarjeta
+          </button>
+          <h3 class="fourFieldset__title js-errorCard"></h3>
+        </div>
+      </fieldset>
+      <fieldset class="fourFieldset">
+        <div class="js-fourFieldset collapsed">
+          <a
+            href=""
+            title="Haz click para ir a la tarjeta creada"
+            class="fourFieldset__link js_url_card"
+          ></a>
+
+          <button
+            class="fourFieldset__button js-twitterButton"
+            title="Compartir en twitter"
+          >
+            <i class="fa-brands fa-twitter"></i>Compartir en twitter
+          </button>
+        </div>
+      </fieldset>
+
+    </form>
+
+  </div>
+
+  <footer class="footer">
+    <small class="footer__text">Awesome profile-cards @2018</small>
+    <a href="http://adalab.es" target="_blank">
+      <img class="footer__logo" src="./assets/images/logo_ninfas.png" alt="Logo Ninfas" title="Logo Equipo Ninfas" />
+    </a>
+  </footer>
+  <script src="./assets/js/main.js"></script>
+</body>
+
+</html>
