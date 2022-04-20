@@ -1,8 +1,14 @@
 import '../styles/App.scss';
 import logoAwesome from '../images/awesome.svg';
 import logo from '../images/logo_ninfas.png';
+import { useState } from 'react';
 
 function App() {
+  const [name, setName] = useState('Nombre Apellido');
+  const handleName = (event) => {
+    setName(event.currentTarget.value);
+    console.log(event.currentTarget.value);
+  };
   return (
     <>
       <header className='header'>
@@ -24,7 +30,7 @@ function App() {
             <div className='card js-preview'>
               <div className='card__personalInfo personalInfoBorderPalette1 js-borde'>
                 <p className='card__personalInfo--name js-personalName personalInfoNamePalette1'>
-                  Nombre Apellido
+                  {name}
                 </p>
                 <p className='card__personalInfo--job js-cardJob'>
                   Front-End developer
@@ -105,7 +111,7 @@ function App() {
                     name='palette'
                     value='1'
                   />
-                  <label for='palette1'>
+                  <label htmlFor='palette1'>
                     <ul className='design-list'>
                       <li className='squad1'></li>
                       <li className='squad2'></li>
@@ -121,7 +127,7 @@ function App() {
                     name='palette'
                     value='2'
                   />
-                  <label for='palette2'>
+                  <label htmlFor='palette2'>
                     <ul className='design-list'>
                       <li className='squad1-1'></li>
                       <li className='squad2-2'></li>
@@ -137,7 +143,7 @@ function App() {
                     name='palette'
                     value='3'
                   />
-                  <label for='palette3'>
+                  <label htmlFor='palette3'>
                     <ul className='design-list'>
                       <li className='squad1-1-1'></li>
                       <li className='squad2-2-2'></li>
@@ -153,7 +159,7 @@ function App() {
                     name='palette'
                     value='4'
                   />
-                  <label for='palette4'>
+                  <label htmlFor='palette4'>
                     <ul className='design-list'>
                       <li className='squad1-4'></li>
                       <li className='squad2-4'></li>
@@ -169,7 +175,7 @@ function App() {
                     name='palette'
                     value='5'
                   />
-                  <label for='palette5'>
+                  <label htmlFor='palette5'>
                     <ul className='design-list'>
                       <li className='squad1-5'></li>
                       <li className='squad2-5'></li>
@@ -185,7 +191,7 @@ function App() {
                     name='palette'
                     value='6'
                   />
-                  <label for='palette6'>
+                  <label htmlFor='palette6'>
                     <ul className='design-list'>
                       <li className='squad1-6'></li>
                       <li className='squad2-6'></li>
@@ -202,9 +208,9 @@ function App() {
               <i className='fa-solid fa-keyboard icon'></i>Rellena
               <i className='fa-solid fa-angle-up js-angleFill rotate'></i>
             </h3>
-            <div className='js-secondFieldset collapsed'>
-              <label for='completeName' className='secondFieldset__label'>
-                Nombre completo
+            <div className='js-secondFieldset'>
+              <label htmlFor='completeName' className='secondFieldset__label'>
+                Nombre Apellido
               </label>
               <input
                 id='completeName'
@@ -213,9 +219,9 @@ function App() {
                 placeholder='Ej:Sally Jill'
                 className='secondFieldset__input js-name js-input'
                 required
-                value=''
+                onChange={handleName}
               />
-              <label for='marketStall' className='secondFieldset__label'>
+              <label htmlFor='marketStall' className='secondFieldset__label'>
                 Puesto
               </label>
               <input
@@ -227,7 +233,7 @@ function App() {
                 required
                 value=''
               />
-              <label for='addimage' className='secondFieldset__label'>
+              <label htmlFor='addimage' className='secondFieldset__label'>
                 Imagen de perfil
               </label>
               <div className='secondFieldset__buttoncontainer'>
@@ -241,7 +247,7 @@ function App() {
               Añadir imagen
   </button>*/}
                 <label
-                  for='photo'
+                  htmlFor='photo'
                   className='label secondFieldset__button js__profile-trigger'
                 >
                   Añadir imagen
@@ -254,7 +260,7 @@ function App() {
 
                 <div type='text' className='square js__profile-preview'></div>
               </div>
-              <label for='addemail' className='secondFieldset__label'>
+              <label htmlFor='addemail' className='secondFieldset__label'>
                 Email
               </label>
               <input
@@ -265,7 +271,7 @@ function App() {
                 className='secondFieldset__input js-addemail js-input'
                 required
               />
-              <label for='addphone' className='secondFieldset__label'>
+              <label htmlFor='addphone' className='secondFieldset__label'>
                 Teléfono
               </label>
               <input
@@ -276,7 +282,7 @@ function App() {
                 className='secondFieldset__input js-addPhone js-input'
                 required
               />
-              <label for='addLinkedin' className='secondFieldset__label'>
+              <label htmlFor='addLinkedin' className='secondFieldset__label'>
                 Linkedin
               </label>
               <input
@@ -287,7 +293,7 @@ function App() {
                 className='secondFieldset__input js-addLinkedin js-input'
                 required
               />
-              <label for='addGithub' className='secondFieldset__label'>
+              <label htmlFor='addGithub' className='secondFieldset__label'>
                 Github
               </label>
               <input
