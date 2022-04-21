@@ -139,7 +139,7 @@ function App() {
               <div className="colors">
                 <div className="design-option">
                   <input
-                    className="input js-input1 design-input js_radio"
+                    className={`input js-input1 design-input js_radio palette-${dataCard.palette}`}
                     type="radio"
                     id="palette-1"
                     name="palette"
@@ -149,15 +149,15 @@ function App() {
                   />
                   <label htmlFor="palette1">
                     <ul className="design-list">
-                      <li className="squad1"></li>
-                      <li className="squad2"></li>
-                      <li className="squad3"></li>
+                      <li className="squad1-1"></li>
+                      <li className="squad1-2"></li>
+                      <li className="squad1-3"></li>
                     </ul>
                   </label>
                 </div>
                 <div className="design-option">
                   <input
-                    className="input js-input2 design-input js_radio"
+                    className={`input js-input2 design-input js_radio palette-${dataCard.palette}`}
                     type="radio"
                     id="palette-2"
                     name="palette"
@@ -167,15 +167,15 @@ function App() {
                   />
                   <label htmlFor="palette2">
                     <ul className="design-list">
-                      <li className="squad1-1"></li>
+                      <li className="squad2-1"></li>
                       <li className="squad2-2"></li>
-                      <li className="squad3-3"></li>
+                      <li className="squad2-3"></li>
                     </ul>
                   </label>
                 </div>
                 <div className="design-option">
                   <input
-                    className="input js-input3 design-input js_radio"
+                    className={`input js-input3 design-input js_radio palette-${dataCard.palette}`}
                     type="radio"
                     id="palette-3"
                     name="palette"
@@ -193,7 +193,7 @@ function App() {
                 </div>
                 <div className="design-option">
                   <input
-                    className="input js-input4 design-input js_radio"
+                    className={`input js-input4 design-input js_radio palette-${dataCard.palette}`}
                     type="radio"
                     id="palette-4"
                     name="palette"
@@ -211,7 +211,7 @@ function App() {
                 </div>
                 <div className="design-option">
                   <input
-                    className="input js-input5 design-input js_radio"
+                    className={`input js-input5 design-input js_radio palette-${dataCard.palette}`}
                     type="radio"
                     id="palette-5"
                     name="palette"
@@ -229,7 +229,7 @@ function App() {
                 </div>
                 <div className="design-option">
                   <input
-                    className="input js-input6 design-input js_radio"
+                    className={`input js-input6 design-input js_radio palette-${dataCard.palette}`}
                     type="radio"
                     id="palette-6"
                     name="palette"
