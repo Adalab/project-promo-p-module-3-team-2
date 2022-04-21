@@ -4,12 +4,6 @@ import logo from "../images/logo_ninfas.png";
 import { useState } from "react";
 
 function App() {
-  /* const [name, setName] = useState('Nombre Apellido'); */
-  /* const handleName = (event) => {
-    setName(event.currentTarget.value);
-    console.log(event.currentTarget.value);
-  }; */
-
   const [dataCard, setDataCard] = useState({
     palette: "1",
     name: "",
@@ -29,6 +23,19 @@ function App() {
       [inputChanged]: inputValue,
     });
   };
+  const handleReset = (ev) => {
+    ev.preventDefault();
+    setDataCard({
+      palette: "1",
+      name: "",
+      job: "",
+      image: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+    });
+  };
   return (
     <>
       <header className="header">
@@ -44,11 +51,15 @@ function App() {
       <div className="mainCreate__container">
         <section className="container__preview">
           <div className="card__container">
-            <button className="card__reset js-reset" href="#">
+            <button
+              className="card__reset js-reset"
+              href="#"
+              onClick={handleReset}
+            >
               <i className="far fa-trash-alt"></i> reset
             </button>
             <div className="card js-preview">
-              <div className="card__personalInfo personalInfoBorderPalette js-borde">
+              <div className="card__personalInfo personalInfoBorderPalette1 js-borde">
                 <p className="card__personalInfo--name js-personalName personalInfoNamePalette1">
                   {dataCard.name || "Nombre Apellidos"}
                 </p>
@@ -73,8 +84,9 @@ function App() {
                   <li className="card__rrss">
                     <a
                       className="card__rrss--item rrssPalette1 js-border2 js-iconEmail"
-                      href={`mailto:${dataCard.mail}`}
+                      href={`mailto:${dataCard.email || "hola@adalab.es"}`}
                       target="_blank"
+                      rel="noreferrer"
                       title="email address"
                     >
                       <i className="icon far fa-envelope js-icon2"></i>
@@ -85,6 +97,7 @@ function App() {
                       className="card__rrss--item rrssPalette1 js-border3 js-iconLinkedin"
                       href={`https://es.linkedin.com/in/${dataCard.linkedin}`}
                       target="_blank"
+                      rel="noreferrer"
                       title="linkedin"
                     >
                       <i className="icon fab fa-linkedin-in js-icon3"></i>
@@ -95,6 +108,7 @@ function App() {
                       className="card__rrss--item rrssPalette1 js-border4 js-iconGithub"
                       href={`https://github.com/${dataCard.github}`}
                       target="_blank"
+                      rel="noreferrer"
                       title="github"
                     >
                       <i className="icon fab fa-github-alt js-icon4"></i>
@@ -366,12 +380,12 @@ function App() {
           </fieldset>
           <fieldset className="fourFieldset">
             <div className="js-fourFieldset collapsed">
-              <a
-                href=""
+              {/*      <a
+                href="#"
                 title="Haz click para ir a la tarjeta creada"
                 className="fourFieldset__link js_url_card"
                 rel="noreferrer"
-              ></a>
+              ></a> */}
 
               <button
                 className="fourFieldset__button js-twitterButton"
