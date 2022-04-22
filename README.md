@@ -1,126 +1,125 @@
-# Proyecto Modulo
+# Hola 👋🏽, somos el equipo 2
 
-## Descripción del proyecto🚀:
+**Y este es nuestro proyecto realizado en el módulo 3, React**
+
+## 🚀 Descripción del proyecto:
 
 ### Resumen:
 
-En este proyecto vamos a realizar una aplicación web que nos permite crear una tarjeta de visita personalizada. En la página web podemos introducir nuestros datos profesionales y obtener una vista maquetada con esta información. Lo bueno de este proyecto es que será una herramienta de la que os podréis beneficiar. Será una aplicación web interactiva creada por vosotras y que podéis usar para crear vuestras propias tarjetas de visita profesionales.
+En este proyecto vamos a trabajar con un caso muy típico que se suele producir en el mundo de la programación, un trabajo que nos viene dado, con código heredado, es decir escrito por otra persona y sobre el que tenemos que trabajar.
 
 ### Objetivos:
 
-Aprender los conceptos básicos de programación (variables, estructuras de datos, condicionales, funciones, etc.)
-Comprender cómo manipular el DOM de una página y responder a eventos del usuario
-Manejar estructuras de datos complejas, con arrays y objetos
-Realizar peticiones al servidor y almacenar datos en local
-Implementar Scrum como marco de referencia para el desarrollo del producto, basándonos siempre en los valores de Agile como puntos clave del trabajo en equipo y la mejora continua
-Mejorar la comunicación entre los miembros del equipo
-Mejorar vuestras habilidades de comunicación en público al exponer el proyecto en la sesión final
+1. Lidiar con código heredado y ser capaces de refactorizarlo.
+2. Saber identificar y generar los componentes de una página, separarlos y crear componentes visualmente similares a partir de estos.
+3. Aprender a usar React para crear una aplicación web sencilla.
+4. Aprender a buscar información en la documentación de librerías externas.
+5. Implementar Scrum como marco de referencia para el desarrollo del producto, basándonos siempre en los valores de Agile como puntos clave del trabajo en equipo y la mejora continua.
+6. Mejorar la comunicación entre los miembros del equipo.
+7. Mejorar vuestras habilidades de comunicación en público al exponer el proyecto en la sesión final.
 
 ### Caso de uso:
 
-Con esta web podréis mostrar que, a parte de maquetar, podéis crear una página web con la que interactuar y sacar algo que vaya más allá de una página que solo muestra información. Esto os permitirá mostrar vuestras habilidades a la hora de trabajar con JavaScript en GitHub, algo que en las empresas se valora bastante a la hora de escoger candidatas para puestos de programadora front-end.
+La idea fundamental de este proyecto es aprender a trabajar con un proyecto heredado. De esta forma desarrollamos nuestra capacidad de adaptarnos a proyectos ya existentes. Esto nos preparará para, de cara al futuro, entrar en equipos nuevos de desarrollo con mayor rapidez, mejorar nuestra capacidad de modificación de código creado por otras personas y concienciarnos de la importancia de crear buen código visto desde la otra parte, la persona que lo recibe.
 
 ### Especificaciones:
 
-En el desarrollo de esta aplicación web usaremos las siguientes tecnologías:
+Se partirá de un proyecto funcional (el generador de tarjetas interactivas), solo debemos heredar todo el Sass del proyecto, mantenerlo, evolucionarlo y refactorizarlo.
 
-- Uso avanzado de formularios HTML
-- Maquetación usando CSS avanzado, como flex y grid
-- Uso de mediaqueries para que el diseño sea adaptable al dispositivo usando la estrategia mobile first
-- Gestión de eventos en el navegador (al hacer click, pasa x, etc.)
-- Acceso y envío de datos a un servidor
-- Almacenamiento en local usando LocalStorage
-- Uso de git para el control de versiones del proyecto
+> **_Refactorizar código_** consiste en modificar un código para mejorar su estructura pero sin añadir nuevas funcionalidades.
+
+- Uso de Sass para los estilos
+- Uso de mediaqueries para que el diseño sea adaptable al dispositivo
+- Desarrollo usando la estrategia mobile first
+- Uso de git para el control de versiones del proyecto, con ramas y pull-requests para revisar los cambios de las compañeras
 - Publicación del resultado en Internet usando GitHub Pages
-  El proyecto consta de 2 páginas:
-- Una página landing de bienvenida
-- Una página con la aplicación de crear tarjetas
-  La aplicación funciona siguiendo estos pasos:
 
-1. Permitir al usuario elegir el estilo de la tarjeta, eligiendo paleta de colores
-2. Permitir al usuario que, mediante la introducción de información en un formulario, este texto se muestre maquetado automáticamente en un cuadro similar a una tarjeta de visita, que será la muestra del resultado final
-3. Permitir que el usuario pueda crear una web con su tarjeta y compartirla por Twitter
+**La webapp deberá tener las siguientes nuevas características:**
 
-La tarjeta de visita deberá tener los siguientes campos (entre paréntesis el nombre del campo a usar):
-
-- Nombre completo (full_name)
-- Profesión (desarrolladora front-end ;) (job)
-- Datos personales
-  - Teléfono (phone)
-  - Correo electrónico (email)
-- RRSS - LinkedIn (linkedin) - GitHub (github)
-  Respecto a la interacción con la web:
-- Los campos deberán tener restricciones para su formato indicado. Campo de teléfono para el móvil, mail para el correo, etc.
-- Las modificaciones que hacemos en el formulario (diseño y contenido), aparecen automáticamente en la vista previa de la tarjeta
-- Las 3 partes del proceso de creación serán elementos colapsables, que al hacer clic en el título se mostrará/ocultará solo mostrando una sección a la vez
-- Toda la información del formulario debe almacenarse en LocalStorage (almacenamiento local del navegador), de forma que al recargar la página siga disponible y podamos borrarla con un botón de Reset. Para esto, debemos definir una estructura de datos compleja (con arrays y objetos) que es lo que guardaremos en el navegador
-- Para compartir en Twitter seguiremos 2 pasos:
-  1- Al hacer clic en el botón de "Enviar" enviaremos el formulario (submit) a un API que devolverá la URL de una web con la tarjeta de visita con la información rellena
-
-2. Mostraremos esta URL para que el usuario verifique si la tarjeta está bien definida y un botón de "Compartir" que enlazará a Twitter donde habrá un tweet con texto predefinido que incluye la URL de la tarjeta
-
-## Diseño
-
-El diseño lo podéis inspeccionar en este proyecto de zeplin.
-
-### Archivos
-
-Podéis descargar los logos necesarios para completar el proyecto:
-
-- Logo de Adalab
-- Logo de Awesome Profile-cards
-
-### Creatividad
-
-Aunque el diseño del proyecto está cerrado, hemos dejado algunos aspectos que podéis personalizar:
-
-- Usar un logo personalizado del equipo (o nombre del equipo) en el pie de página, tras la información de copyright
-- Utilizar un fondo personalizado en la previsualización de la tarjeta
-- Añadir más paletas a las definidas en el diseño, pero no eliminar las que os proponemos ;)
+- Uso de React para la estructuración del JS de la aplicación
+- Deberá usar transiciones y/o animaciones para mejorar interacciones con la aplicación
+- Debe implementarse con una navegación entre distintas páginas de la aplicación usando React router
 
 ## Planificación del proyecto
 
 ### Sprints
 
-Para la realización de este proyecto trabajaremos en 2 sprints (2 iteraciones) de 7 sesiones cada uno. Siguiendo los principios ágiles estableceremos pequeños ciclos iterativos de forma que al final de cada uno generemos valor perceptible por nuestros usuarios (los visitantes de la web). Dedicaremos el primer día a la planificación del sprint (sprint planning) y el resto a trabajar en el desarrollo del proyecto. Al final de cada sprint haremos una demo del proyecto para presentar los resultados conseguidos, y una retrospectiva (retro) para evaluar nuestro trabajo en equipo y mejorar en el siguiente sprint.
-Al final del primer sprint haremos una demo corta de 5 minutos para presentar el resultado del trabajo al resto de las compañeras y a las profesoras. También haremos una retro corta revisando los working agreements que hemos acordado al inicio del proyecto.
-Al final del segundo sprint (final del proyecto), haremos una demo de 5 minutos más preguntas, y una retrospectiva usando una dinámica similar a las usadas en los equipos de desarrollo que usan Scrum.
+- Para la realización de este proyecto trabajaremos en **2 sprints (2 iteraciones) de 5 sesiones cada uno.**
+
+* Al final del primer sprint haremos una demo corta de 5 minutos para presentar el resultado del trabajo al resto de las compañeras y a las profesoras. También haremos una retro corta revisando los working agreements que hemos acordado al inicio del proyecto.
+* Al final del segundo sprint (final del proyecto), haremos una demo de 5 minutos más preguntas, y una retrospectiva usando una dinámica similar a las usadas en los equipos de desarrollo que usan Scrum.
 
 ### Historias de usuario
 
-Para la gestión del proyecto, usaremos historias de usuario, que es una herramienta para definir las características de un producto.
+Para la gestión del proyecto, usaremos historias de usuario, que es una herramienta para definir las características de un producto. Usaremos las mismas historias de usuario que ya tenemos definidas del proyecto anterior.
 
-### Primera. Landing y UI de la herramienta
+### Planificación técnica
 
-- Desarrollar la página de landing
-- Desarrollar una primera versión básica de la web, con la maquetación de la estructura básica (para desktop y móvil) que incluye el formulario con los colapsables y la vista previa
+**Primer paso. Análisis del proyecto.**
 
-### Segunda. Versión interactiva
+- En este proyecto usaremos 2 repos:
 
-- Actualización de la foto en la vista previa de la tarjeta, usando el componente proporcionado
-- Añadir la funcionalidad de compartir en Twitter, enviando primero los datos al servidor para obtener la URL para compartir
-- Hacer que el contenido se almacene en LocalStorage del navegador
+1. El repo del proyecto que nos hayan asignado, donde trabajaremos en una rama para entender y mejorar el código heredado. Esto quiere decir que sí podemos modificar el repo antiguo, pero sin tocar la rama master.
+2. Un nuevo repo con el proyecto de React.
 
-# Construido con 🛠️:
+- Analizar y probar el código y entender su estructura para poder adaptarla a nuestras necesidades y conocimientos.
+- Solucionar errores detectados en el código.
 
-## Lenguajes:
+**Segundo paso. Maquetación con React de la página de la herramienta**
 
-HTML
-SCSS
-JAVASCRIPT
-Estructura BEM
+- Definir la estructura de componentes React de la aplicación.
+- Generar los componentes del proyecto y comunicar información mediante props.
 
-## Herramientas:
+**Tercer paso. Versión completa con React**
 
-VSC
-GITHUB
-GULP
-ADALAB WEB STARTER KIT
-NPM
+- Realizar la interactividad, usando el estado y los eventos de React.
+- Usar inputs de tipo file para la gestión de la foto de la tarjeta.
+- Implementar la comunicación con el backend, la función de compartir y offline.
 
-# Autores:
+**Cuarto paso. Mejoras finales**
 
-Prado Carretero
-Maria Ortiz
-Rocio Del Villar
-Naiara Saratxaga
+- Crear la página de landing.
+- Implementar las rutas con React router.
+- Revisión del código y pruebas.
+- Podrán implementarse otras mejoras visuales si todo ya está terminado y acordado con el PO.
+
+# 👀 Dónde se puede ver
+
+[Nuestro proyecto](http://beta.adalab.es/project-promo-p-module-3-team-2/)
+
+# Guía para arrancar el proyecto
+
+> **NOTA:** Necesitas tener instalado [Node JS](https://nodejs.org/) para trabajar con este Starter Kit.
+
+**Pasos a seguir :**
+
+1. _Clonar este repositorio_
+2. _Abrir una terminal en la carpeta raíz del repositorio_
+3. _Instalar las dependencias locales ejecutando en la terminal el comando:_
+
+```bash
+npm install
+```
+
+**Arrancar el proyecto con el comando**
+
+```bash
+npm start
+```
+
+# Este proyecto ha sido desarrollado con:
+
+<p>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original.svg" alt="react" width="40" height="40"/> </a> 
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40"/> 
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg" alt="html5" width="40" height="40"/>
+<a href="https://sass-lang.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/sass/sass-original.svg" alt="sass" width="40" height="40"/>
+<a href="https://github.com/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/github/github-original.svg" alt=“github” width="40" height="40"/> </a> 
+</p>
+
+# Autoras:
+
+- [Prado Carretero](https://github.com/PradoCarretero)
+- [Maria Ortiz](https://github.com/miaor5)
+- [Rocio Del Villar](https://github.com/RocioDvn)
+- [Naiara Saratxaga](https://github.com/NaiSaratxaga)
