@@ -14,6 +14,13 @@ function App() {
     linkedin: '',
     github: '',
   });
+  const [toCollapsed, setToCollapsed] = useState('collapsed');
+
+  const handleClickLegend = (ev) => {
+    setToCollapsed(ev.currectTarget.id);
+
+    return setToCollapsed(!toCollapsed);
+  };
 
   const handleInput = (ev) => {
     const inputValue = ev.target.value;
@@ -128,14 +135,20 @@ function App() {
           id='myform'
         >
           <fieldset className='container-desing'>
-            <legend className='legend js-titleDesign' id='design'>
+            <legend
+              onClick={handleClickLegend}
+              className='legend js-titleDesign'
+              id='design'
+            >
               <h2 className='title-design'>
                 <i className='far fa-object-ungroup'></i>Diseña
                 <i className='fa-solid fa-angle-up js-angleDesign'></i>
                 {/*<i className="fas fa-chevron-up js-angleDesign"></i>--/>*/}
               </h2>
             </legend>
-            <section className='container-colors js-firstFieldset'>
+            <section
+              className={`${toCollapsed} container-colors js-firstFieldset`}
+            >
               <p className='paragraph'>colores</p>
               <div className='colors'>
                 <div className='design-option'>
@@ -251,11 +264,15 @@ function App() {
           </fieldset>
 
           <fieldset className='secondFieldset'>
-            <h3 className='secondFieldset__legend js-titleFill' id='fill'>
+            <h3
+              onClick={handleClickLegend}
+              className='secondFieldset__legend js-titleFill'
+              id='fill'
+            >
               <i className='fa-solid fa-keyboard icon'></i>Rellena
               <i className='fa-solid fa-angle-up js-angleFill rotate'></i>
             </h3>
-            <div className='js-secondFieldset'>
+            <div className={`${toCollapsed} js-secondFieldset`}>
               <label htmlFor='completeName' className='secondFieldset__label'>
                 Nombre Apellido
               </label>
@@ -365,11 +382,15 @@ function App() {
           </fieldset>
 
           <fieldset className='thirdFieldset'>
-            <h3 className='thirdFieldset__legend js-titleShare' id='share'>
+            <h3
+              onClick={handleClickLegend}
+              className='thirdFieldset__legend js-titleShare'
+              id='share'
+            >
               <i className='fa-solid fa-share-nodes'></i>Comparte
               <i className='fa-solid fa-angle-up js-angleShare rotate'></i>
             </h3>
-            <div className='js-thirdFieldset collapsed'>
+            <div className={`${toCollapsed}js-thirdFieldset`}>
               <button
                 className='thirdFieldset__button js-thirdFieldset__button js_create_button'
                 title='Crear tarjeta'
