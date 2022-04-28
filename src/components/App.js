@@ -2,6 +2,7 @@ import '../styles/App.scss';
 import logoAwesome from '../images/awesome.svg';
 import logo from '../images/logo_ninfas.png';
 import { useState } from 'react';
+import dataApi from '../services/api';
 
 function App() {
   const [dataCard, setDataCard] = useState({
@@ -14,12 +15,21 @@ function App() {
     linkedin: '',
     github: '',
   });
-  const [toCollapsed, setToCollapsed] = useState('collapsed');
+
+  const [apiData, setApiData] = useState({});
+
+  /*const [toCollapsed, setToCollapsed] = useState('collapsed');
 
   const handleClickLegend = (ev) => {
     setToCollapsed(ev.currectTarget.id);
 
     return setToCollapsed(!toCollapsed);
+  };*/
+  const handleClickCreateCard = (ev) => {
+    ev.preventDefault();
+    dataApi(dataCard).then((info) => {
+      setApiData(info);
+    });
   };
 
   const handleInput = (ev) => {
@@ -69,7 +79,7 @@ function App() {
             <div className={`card js-preview palette-${dataCard.palette}`}>
               <div className='card__personalInfo personalInfoBorderPalette1 js-borde'>
                 <p className='card__personalInfo--name js-personalName personalInfoNamePalette1'>
-                  {dataCard.name || 'Nombre Apellidos'}
+                  {'Nombre Apellidos'}
                 </p>
                 <p className='card__personalInfo--job js-cardJob'>
                   {dataCard.job || 'Front-End developer'}
@@ -136,7 +146,7 @@ function App() {
         >
           <fieldset className='container-desing'>
             <legend
-              onClick={handleClickLegend}
+              /*onClick={handleClickLegend}*/
               className='legend js-titleDesign'
               id='design'
             >
@@ -146,9 +156,7 @@ function App() {
                 {/*<i className="fas fa-chevron-up js-angleDesign"></i>--/>*/}
               </h2>
             </legend>
-            <section
-              className={`${toCollapsed} container-colors js-firstFieldset`}
-            >
+            <section className='container-colors js-firstFieldset'>
               <p className='paragraph'>colores</p>
               <div className='colors'>
                 <div className='design-option'>
@@ -265,14 +273,14 @@ function App() {
 
           <fieldset className='secondFieldset'>
             <h3
-              onClick={handleClickLegend}
+              /*onClick={handleClickLegend}*/
               className='secondFieldset__legend js-titleFill'
               id='fill'
             >
               <i className='fa-solid fa-keyboard icon'></i>Rellena
               <i className='fa-solid fa-angle-up js-angleFill rotate'></i>
             </h3>
-            <div className={`${toCollapsed} js-secondFieldset`}>
+            <div className='js-secondFieldset'>
               <label htmlFor='completeName' className='secondFieldset__label'>
                 Nombre Apellido
               </label>
@@ -383,17 +391,18 @@ function App() {
 
           <fieldset className='thirdFieldset'>
             <h3
-              onClick={handleClickLegend}
+              /*onClick={handleClickLegend}*/
               className='thirdFieldset__legend js-titleShare'
               id='share'
             >
               <i className='fa-solid fa-share-nodes'></i>Comparte
               <i className='fa-solid fa-angle-up js-angleShare rotate'></i>
             </h3>
-            <div className={`${toCollapsed}js-thirdFieldset`}>
+            <div className='js-thirdFieldset'>
               <button
                 className='thirdFieldset__button js-thirdFieldset__button js_create_button'
                 title='Crear tarjeta'
+                onClick={handleClickCreateCard}
               >
                 <i className='fa-regular fa-address-card'></i>Crear tarjeta
               </button>
@@ -402,12 +411,13 @@ function App() {
           </fieldset>
           <fieldset className='fourFieldset'>
             <div className='js-fourFieldset collapsed'>
-              {/*      <a
-                href="#"
-                title="Haz click para ir a la tarjeta creada"
-                className="fourFieldset__link js_url_card"
-                rel="noreferrer"
-              ></a> */}
+              <a
+                href=''
+                title='Haz click para ir a la tarjeta creada'
+                className='fourFieldset__link js_url_card'
+              >
+                {apiData.success || 'url'}
+              </a>
 
               <button
                 className='fourFieldset__button js-twitterButton'
