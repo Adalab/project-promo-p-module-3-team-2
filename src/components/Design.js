@@ -1,8 +1,13 @@
 function Design(props) {
+  const handleInput = (ev) => {
+    const inputValue = ev.target.value;
+    const inputChanged = ev.target.name;
+    props.handleInputChange(inputValue, inputChanged);
+  };
   return (
     <fieldset className='container-desing'>
       <legend
-        onClick={handleClickDesign}
+        onClick={props.handleClickDesign}
         className='legend js-titleDesign'
         id='design'
       >

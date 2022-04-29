@@ -3,10 +3,7 @@ import logoAwesome from '../images/awesome.svg';
 import logo from '../images/logo_ninfas.png';
 import { useState } from 'react';
 import dataApi from '../services/Api';
-import Header from './Header';
-import Footer from './Footer';
-import CardPreview from './CardPreview';
-import Design from './Design';
+
 import Cards from './Cards';
 
 function App() {
@@ -22,9 +19,6 @@ function App() {
   });
 
   const [apiData, setApiData] = useState({});
-  const [collapseDesign, setCollapseDesign] = useState(true);
-  const [collapseFill, setCollapseFill] = useState(true);
-  const [collapseShare, setCollapseShare] = useState(true);
 
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
@@ -36,19 +30,9 @@ function App() {
     });
   };
 
-  const handleClickDesign = () => {
-    setCollapseDesign(!collapseDesign);
-  };
-  const handleClickFill = () => {
-    setCollapseFill(!collapseFill);
-  };
-  const handleClickShare = () => {
-    setCollapseShare(!collapseShare);
-  };
-
-  const handleInput = (ev) => {
-    const inputValue = ev.target.value;
-    const inputChanged = ev.target.name;
+  const handleInputChange = (inputValue, inputChanged) => {
+    // const inputValue = ev.target.value;
+    // const inputChanged = ev.target.name;
     setDataCard({
       ...dataCard,
       [inputChanged]: inputValue,
@@ -68,7 +52,15 @@ function App() {
     });
   };
 
-  return <Cards />;
+  return (
+    <Cards
+      dataCard={dataCard}
+      logoAwesome={logoAwesome}
+      logo={logo}
+      handleReset={handleReset}
+      handleInputChange={handleInputChange}
+    />
+  );
 }
 
 export default App;
