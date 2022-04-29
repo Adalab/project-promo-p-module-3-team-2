@@ -3,6 +3,8 @@ import Footer from './Footer';
 import CardPreview from './CardPreview';
 import Design from './Design';
 import { useState } from 'react';
+import Fill from './Fill';
+import Share from './Share';
 
 function Cards(props) {
   const [collapseDesign, setCollapseDesign] = useState(true);
@@ -39,7 +41,19 @@ function Cards(props) {
             handleClickDesign={handleClickDesign}
             handleInputChange={props.handleInputChange}
           />
-          Fill Share
+          <Fill
+            dataCard={props.dataCard}
+            collapseFill={collapseFill}
+            handleClickFill={handleClickFill}
+            handleInputChange={props.handleInputChange}
+          />
+          <Share
+            dataCard={props.dataCard}
+            collapseShare={collapseShare}
+            handleClickShare={handleClickShare}
+            handleClickCreateCard={props.handleClickCreateCard}
+            apiData={props.apiData}
+          />
         </form>
       </div>
       <Footer src={props.logo} />

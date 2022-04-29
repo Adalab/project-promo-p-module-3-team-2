@@ -23,7 +23,6 @@ function App() {
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
     dataApi(dataCard).then((info) => {
-      console.log(dataCard);
       console.log(info);
       setApiData(info);
       console.log(apiData);
@@ -31,8 +30,6 @@ function App() {
   };
 
   const handleInputChange = (inputValue, inputChanged) => {
-    // const inputValue = ev.target.value;
-    // const inputChanged = ev.target.name;
     setDataCard({
       ...dataCard,
       [inputChanged]: inputValue,
@@ -59,6 +56,8 @@ function App() {
       logo={logo}
       handleReset={handleReset}
       handleInputChange={handleInputChange}
+      handleClickCreateCard={handleClickCreateCard}
+      apiData={apiData}
     />
   );
 }
