@@ -12,7 +12,11 @@ function Fill(props) {
         id='fill'
       >
         <i className='fa-solid fa-keyboard icon'></i>Rellena
-        <i className='fa-solid fa-angle-up js-angleFill rotate'></i>
+        <i
+          className={`fa-solid fa-angle-up ${
+            props.collapseFill ? 'rotate' : ''
+          } js-angleFill`}
+        ></i>
       </h3>
       <div
         className={`${props.collapseFill ? 'collapsed' : ''} js-secondFieldset`}

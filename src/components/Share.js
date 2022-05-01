@@ -8,7 +8,11 @@ function Share(props) {
           id='share'
         >
           <i className='fa-solid fa-share-nodes'></i>Comparte
-          <i className='fa-solid fa-angle-up js-angleShare rotate'></i>
+          <i
+            className={`fa-solid fa-angle-up ${
+              props.collapseShare ? 'rotate' : ''
+            } js-angleShare`}
+          ></i>
         </h3>
         <div
           className={`${

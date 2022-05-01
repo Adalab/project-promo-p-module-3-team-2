@@ -13,8 +13,11 @@ function Design(props) {
       >
         <h2 className='title-design'>
           <i className='far fa-object-ungroup'></i>Diseña
-          <i className='fa-solid fa-angle-up js-angleDesign'></i>
-          {/*<i className="fas fa-chevron-up js-angleDesign"></i>--/>*/}
+          <i
+            className={`fa-solid fa-angle-up ${
+              props.collapseDesign ? 'rotate' : ''
+            } js-angleDesign`}
+          ></i>
         </h2>
       </legend>
 
