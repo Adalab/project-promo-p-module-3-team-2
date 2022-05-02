@@ -1,10 +1,10 @@
-import Header from './Header';
-import Footer from './Footer';
-import CardPreview from './CardPreview';
-import Design from './Design';
-import { useState } from 'react';
-import Fill from './Fill';
-import Share from './Share';
+import Header from "./Header";
+import Footer from "./Footer";
+import CardPreview from "./CardPreview";
+import Design from "./Design";
+import { useState } from "react";
+import Fill from "./Fill";
+import Share from "./Share";
 
 function Cards(props) {
   const [collapseDesign, setCollapseDesign] = useState(true);
@@ -23,17 +23,18 @@ function Cards(props) {
   return (
     <>
       <Header src={props.logoAwesome} />
-      <div className='mainCreate__container'>
+      <div className="mainCreate__container">
         <CardPreview
           dataCard={props.dataCard}
           handleReset={props.handleReset}
+          avatar={props.avatar}
         />
 
         <form
-          action='/signup'
-          method='post'
-          className='form js-form'
-          id='myform'
+          action="/signup"
+          method="post"
+          className="form js-form"
+          id="myform"
         >
           <Design
             dataCard={props.dataCard}
@@ -46,6 +47,8 @@ function Cards(props) {
             collapseFill={collapseFill}
             handleClickFill={handleClickFill}
             handleInputChange={props.handleInputChange}
+            avatar={props.avatar}
+            updateAvatar={props.updateAvatar}
           />
           <Share
             dataCard={props.dataCard}
