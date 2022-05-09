@@ -5,11 +5,11 @@
   width: 281px;
   position: relative;
   padding: 13px 0px 30px 0px;
-  border-top: $white;
-  border-right: $white;
-  border-left: $white;
-  border-bottom: 1px solid $white-two;
-  font-family: $OpenSansRegular;
+  border-top: var(--white);
+  border-right: var(--white);
+  border-left: var(--white);
+  border-bottom: 1px solid var(--white-two);
+  font-family: var(--OpenSansRegular);
   .input {
     display: none;
   }
@@ -21,7 +21,7 @@
     font-weight: 600;
     font-size: 18px;
     text-transform: uppercase;
-    color: $gunmetal;
+    color: var(--gunmetal);
     display: flex;
     justify-content: flex-start;
     width: 281px;
@@ -31,7 +31,7 @@
     height: 18px;
     font-weight: normal;
     font-size: 14px;
-    color: $dark-green-blue;
+    color: var(--dark-green-blue);
     margin-top: 20px;
     display: flex;
     justify-content: flex-start;
@@ -41,7 +41,7 @@
     height: 30px;
     font-size: 14px;
     padding-left: 13px;
-    border: solid 1px $hospital-green;
+    border: solid 1px var(--hospital-green);
     margin: 7px 0 0;
     @media all and (min-width: 768px) {
       width: 329px;
@@ -53,8 +53,8 @@
     height: 30px;
     border-radius: 3px;
     box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.32);
-    background-color: $dull-orange;
-    color: $white-three;
+    background-color: var(--dull-orange);
+    color: var(--white-three);
     cursor: pointer;
     font-size: 14px;
     line-height: 1.43;
@@ -71,7 +71,7 @@
   }
 }
 .fa-keyboard {
-  color: $dull-orange;
+  color: var(--dull-orange);
   margin-right: 10px;
 }
 .fa-angle-up {
@@ -82,7 +82,7 @@
 .square {
   width: 30px;
   height: 30px;
-  border: solid 1px $hospital-green;
+  border: solid 1px var(--hospital-green);
   background-size: cover;
   background-position: center;
 }

@@ -9,7 +9,11 @@
     grid-template-columns: 329px 1fr;
     grid-template-rows: 1fr;
     grid-gap: 30px;
-    background: linear-gradient(to bottom, $white-four, $white-three 11%);
+    background: linear-gradient(
+      to bottom,
+      var(--white-four),
+      var(--white-three) 11%
+    );
   }
   @media all and(min-width:1200px) {
     grid-template-columns: 30vw 1fr;

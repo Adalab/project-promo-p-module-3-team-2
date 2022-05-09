@@ -1,25 +1,27 @@
-import "../styles/App.scss";
-import "../styles/core/Reset.scss";
-import logoAwesome from "../images/awesome.svg";
-import logo from "../images/logo_ninfas.png";
-import { useState } from "react";
-import dataApi from "../services/Api";
-import localStorage from "../services/localStorage";
-import Cards from "./Cards";
+import '../styles/App.scss';
+import '../styles/core/Reset.scss';
+import logoAwesome from '../images/awesome.svg';
+import logo from '../images/logo_ninfas.png';
+import { useState } from 'react';
+import dataApi from '../services/Api';
+import localStorage from '../services/localStorage';
+import Cards from './Cards';
+import { Route, Routes } from 'react-router-dom';
+import Landing from './Landing';
 
 //Aquí calculamos el estado inicial DataCard, si se ha guardado previamente en LS se usa ese valor. Sino se crea uno por defecto.
 function getInitialDataCardState() {
-  const dataCardFromLocalStorage = localStorage.get("dataCard");
+  const dataCardFromLocalStorage = localStorage.get('dataCard');
   return (
     dataCardFromLocalStorage || {
-      palette: "1",
-      name: "",
-      job: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-      github: "",
-      photo: "",
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+      photo: '',
     }
   );
 }
@@ -46,9 +48,9 @@ function App() {
       ...dataCard,
       [inputChanged]: inputValue,
     };
-    console.log("yeah");
+    console.log('yeah');
     setDataCard(newDataCard);
-    localStorage.set("dataCard", newDataCard);
+    localStorage.set('dataCard', newDataCard);
     console.log(dataCard);
   };
 
@@ -57,28 +59,36 @@ function App() {
     ev.preventDefault();
     localStorage.clear();
     setDataCard({
-      palette: "1",
-      name: "",
-      job: "",
-      email: "",
-      phone: "",
-      linkedin: "",
-      github: "",
-      photo: "",
+      palette: '1',
+      name: '',
+      job: '',
+      email: '',
+      phone: '',
+      linkedin: '',
+      github: '',
+      photo: '',
     });
   };
 
   return (
-    <Cards
-      dataCard={dataCard}
-      logoAwesome={logoAwesome}
-      logo={logo}
-      handleReset={handleReset}
-      handleInputChange={handleInputChange}
-      handleClickCreateCard={handleClickCreateCard}
-      apiData={apiData}
-      photo={dataCard.photo}
-    />
+    <Routes>
+      <Route path='/' element={<Landing />} />
+      <Route
+        path='/cards'
+        element={
+          <Cards
+            dataCard={dataCard}
+            logoAwesome={logoAwesome}
+            logo={logo}
+            handleReset={handleReset}
+            handleInputChange={handleInputChange}
+            handleClickCreateCard={handleClickCreateCard}
+            apiData={apiData}
+            photo={dataCard.photo}
+          />
+        }
+      />
+    </Routes>
   );
 }
 

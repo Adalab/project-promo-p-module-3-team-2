@@ -3,14 +3,14 @@
   width: 281px;
   padding: 27px 0px 0px 0px;
   position: relative;
-  border-bottom: 1px solid $white-two;
+  border-bottom: 1px solid var(--white-two);
   @media all and (min-width: 768px) {
     width: 329px;
   }
 }
 .title-design {
   font-size: 18px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 600;
   text-transform: uppercase;
   color: #54585a;
@@ -45,7 +45,7 @@ fa-angle-up {
 .paragraph {
   text-transform: uppercase;
   font-size: 14px;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: #54585a;
 }
 .container-colors {
@@ -158,141 +158,126 @@ fa-angle-up {
   background-color: #e7fbbe;
 }
 .js-darkGreenBlue {
-  color: $dark-green-blue;
-  border: $dark-green-blue;
+  color: var(--dark-green-blue);
+  border: var(--dark-green-blue);
 }
 .js-colorDirtyBlue {
-  color: $dirty-blue;
-  border-left: $dirty-blue solid 5px;
+  color: var(--dirty-blue);
+  border-left: var(--dirty-blue) solid 5px;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
 }
 .js-hospitalGreen {
-  color: $hospital-green;
-  border: $hospital-green solid 2px;
+  color: var(--hospital-green);
+  border: var(--hospital-green) solid 2px;
 }
 .js-driedBlood {
-  color: $dried-blood;
-  border: $dried-blood;
+  color: var(--dried-blood);
+  border: var(--dried-blood);
 }
 .js-rustyRed {
-  color: $rusty-red;
-  border: $rusty-red solid 5px;
+  color: var(--rusty-red);
+  border: var(--rusty-red) solid 5px;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
 }
 .js-tomato {
-  color: $tomato;
-  border: $tomato solid 2px;
+  color: var(--tomato);
+  border: var(--tomato) solid 2px;
 }
 .js-slate {
-  color: $slate;
-  border: $slate;
+  color: var(--slate);
+  border: var(--slate);
 }
 
 .js-fadedOrange {
-  color: $faded-orange;
-  border: $faded-orange solid 5px;
+  color: var(--faded-orange);
+  border: var(--faded-orange) solid 5px;
   border-top: 0;
   border-right: 0;
   border-bottom: 0;
 }
 .js-lightGreyBlue {
-  color: $light-grey-blue;
-  border: $light-grey-blue solid 2px;
+  color: var(--light-grey-blue);
+  border: var(--light-grey-blue) solid 2px;
 }
 
 .palette-1 {
   .card__rrss--item {
-    color: $dark-green-blue;
-    border: 2px solid $hospital-green;
+    color: var(--dark-green-blue);
+    border: 2px solid var(--hospital-green);
   }
   .card__personalInfo {
-    border-left: 5px solid $dirty-blue;
+    border-left: 5px solid var(--dirty-blue);
   }
   .card__personalInfo--name {
-    color: $dark-green-blue;
+    color: var(--dark-green-blue);
   }
 }
 
 .palette-2 {
   .card__rrss--item {
-    color: $dried-blood;
-    border: 2px solid $rusty-red;
+    color: var(--dried-blood);
+    border: 2px solid var(--rusty-red);
   }
   .card__personalInfo {
-    border-left: 5px solid $tomato;
+    border-left: 5px solid var(--tomato);
   }
   .card__personalInfo--name {
-    color: $dried-blood;
+    color: var(--dried-blood);
   }
 }
 
 .palette-3 {
   .card__rrss--item {
-    color: $slate;
-    border: 2px solid $faded-orange;
+    color: var(--slate);
+    border: 2px solid var(--faded-orange);
   }
   .card__personalInfo {
-    border-left: 5px solid $light-grey-blue;
+    border-left: 5px solid var(--light-grey-blue);
   }
   .card__personalInfo--name {
-    color: $slate;
+    color: var(--slate);
   }
 }
 
 .palette-4 {
   .card__rrss--item {
-    color: $pink;
-    border: 2px solid $yellow;
+    color: var(--pink);
+    border: 2px solid var(--yellow);
   }
   .card__personalInfo {
-    border-left: 5px solid $green;
+    border-left: 5px solid var(--green);
   }
   .card__personalInfo--name {
-    color: $pink;
+    color: var(--pink);
   }
 }
 
 .palette-5 {
   .card__rrss--item {
-    color: $blue-ocean;
-    border: 2px solid $magenta;
+    color: var(--blue-ocean);
+    border: 2px solid var(--magenta);
   }
   .card__personalInfo {
-    border-left: 5px solid $green-forest;
+    border-left: 5px solid var(--green-forest);
   }
   .card__personalInfo--name {
-    color: $blue-ocean;
+    color: var(--blue-ocean);
   }
 }
 
 .palette-6 {
   .card__rrss--item {
-    color: $lavende;
-    border: 2px solid $sand;
+    color: var(--lavende);
+    border: 2px solid var(--sand);
   }
   .card__personalInfo {
-    border-left: 5px solid $green-lime;
+    border-left: 5px solid var(--green-lime);
   }
   .card__personalInfo--name {
-    color: $lavende;
+    color: var(--lavende);
   }
 }
-
-@media (min-width: 768px) {
-  /*.container-desing {
-    width: 329px;
-    margin: 0 20px 0 20px;
-  }*/
-  /*.fa-chevron-up {
-    right: 460px;
-  }*/
-}
-/*@media (min-width: 1200px) {
-  .fa-chevron-up {
-    right: 830px;
-  }
-}*/
