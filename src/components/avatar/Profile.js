@@ -3,17 +3,17 @@ import PropTypes from "prop-types";
 import defaultAvatar from "../../images/mariposa.jpg";
 
 function Profile(props) {
-  const avatar = props.avatar === "" ? defaultAvatar : props.avatar;
+  const photo = props.photo === "" ? defaultAvatar : props.photo;
   return (
     <div
       className="card__image "
-      style={{ backgroundImage: `url(${avatar})` }}
+      style={{ backgroundImage: `url(${photo})` }}
     ></div>
   );
 }
 
 Profile.propTypes = {
-  avatar: PropTypes.string.isRequired,
+  photo: PropTypes.string.isRequired,
 };
 
 export default Profile;

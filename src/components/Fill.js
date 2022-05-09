@@ -55,7 +55,10 @@ function Fill(props) {
           Imagen de perfil
         </label>
         <div className="secondFieldset__buttoncontainer">
-          <GetAvatar avatar={props.avatar} updateAvatar={props.updateAvatar} />
+          <GetAvatar
+            handleInputChange={props.handleInputChange}
+            photo={props.photo}
+          />
         </div>
         <label htmlFor="addemail" className="secondFieldset__label">
           Email

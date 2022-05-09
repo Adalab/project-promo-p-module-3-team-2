@@ -23,42 +23,42 @@ function Cards(props) {
   return (
     <>
       <Header src={props.logoAwesome} />
-      <div className="mainCreate__container">
-        <CardPreview
-          dataCard={props.dataCard}
-          handleReset={props.handleReset}
-          avatar={props.avatar}
-        />
-
-        <form
-          action="/signup"
-          method="post"
-          className="form js-form"
-          id="myform"
-        >
-          <Design
+      <main>
+        <div className="mainCreate__container">
+          <CardPreview
             dataCard={props.dataCard}
-            collapseDesign={collapseDesign}
-            handleClickDesign={handleClickDesign}
-            handleInputChange={props.handleInputChange}
+            photo={props.photo}
+            handleReset={props.handleReset}
           />
-          <Fill
-            dataCard={props.dataCard}
-            collapseFill={collapseFill}
-            handleClickFill={handleClickFill}
-            handleInputChange={props.handleInputChange}
-            avatar={props.avatar}
-            updateAvatar={props.updateAvatar}
-          />
-          <Share
-            dataCard={props.dataCard}
-            collapseShare={collapseShare}
-            handleClickShare={handleClickShare}
-            handleClickCreateCard={props.handleClickCreateCard}
-            apiData={props.apiData}
-          />
-        </form>
-      </div>
+          <form
+            action="/signup"
+            method="post"
+            className="form js-form"
+            id="myform"
+          >
+            <Design
+              dataCard={props.dataCard}
+              collapseDesign={collapseDesign}
+              handleClickDesign={handleClickDesign}
+              handleInputChange={props.handleInputChange}
+            />
+            <Fill
+              dataCard={props.dataCard}
+              collapseFill={collapseFill}
+              handleClickFill={handleClickFill}
+              handleInputChange={props.handleInputChange}
+              photo={props.photo}
+            />
+            <Share
+              dataCard={props.dataCard}
+              collapseShare={collapseShare}
+              handleClickShare={handleClickShare}
+              handleClickCreateCard={props.handleClickCreateCard}
+              apiData={props.apiData}
+            />
+          </form>
+        </div>
+      </main>
       <Footer src={props.logo} />
     </>
   );

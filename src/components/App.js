@@ -1,31 +1,27 @@
-import '../styles/App.scss';
-import logoAwesome from '../images/awesome.svg';
-import logo from '../images/logo_ninfas.png';
-import { useState } from 'react';
-import dataApi from '../services/Api';
-import localStorage from '../services/localStorage';
-import defaultAvatar from '../images/mariposa.jpg';
-import Cards from './Cards';
+import "../styles/App.scss";
+import "../styles/core/Reset.scss";
+import logoAwesome from "../images/awesome.svg";
+import logo from "../images/logo_ninfas.png";
+import { useState } from "react";
+import dataApi from "../services/Api";
+import localStorage from "../services/localStorage";
+import Cards from "./Cards";
 
 //Aquí calculamos el estado inicial DataCard, si se ha guardado previamente en LS se usa ese valor. Sino se crea uno por defecto.
 function getInitialDataCardState() {
-  const dataCardFromLocalStorage = localStorage.get('dataCard');
+  const dataCardFromLocalStorage = localStorage.get("dataCard");
   return (
     dataCardFromLocalStorage || {
-      palette: '1',
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: '',
+      palette: "1",
+      name: "",
+      job: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+      photo: "",
     }
   );
-}
-
-function getInitialAvatarState() {
-  const avatarFromLocalStorage = localStorage.get('avatar');
-  return avatarFromLocalStorage || defaultAvatar;
 }
 
 //Al crear estado dataCard le pasamos valor por defecto que calcula getInitialDataCardState.
@@ -34,21 +30,15 @@ function getInitialAvatarState() {
 
 function App() {
   const [dataCard, setDataCard] = useState(getInitialDataCardState());
-  const [avatar, setAvatar] = useState(getInitialAvatarState());
-
   const [apiData, setApiData] = useState({});
-
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
     dataApi(dataCard).then((info) => {
       console.log(info);
       setApiData(info);
+      console.log(dataCard);
       console.log(apiData);
     });
-  };
-  const updateAvatar = (avatar) => {
-    setAvatar(avatar);
-    localStorage.set('avatar', avatar);
   };
 
   const handleInputChange = (inputValue, inputChanged) => {
@@ -56,8 +46,10 @@ function App() {
       ...dataCard,
       [inputChanged]: inputValue,
     };
+    console.log("yeah");
     setDataCard(newDataCard);
-    localStorage.set('dataCard', newDataCard);
+    localStorage.set("dataCard", newDataCard);
+    console.log(dataCard);
   };
 
   //Cuando se haga reset, también se borrará LS.
@@ -65,15 +57,15 @@ function App() {
     ev.preventDefault();
     localStorage.clear();
     setDataCard({
-      palette: '1',
-      name: '',
-      job: '',
-      email: '',
-      phone: '',
-      linkedin: '',
-      github: '',
+      palette: "1",
+      name: "",
+      job: "",
+      email: "",
+      phone: "",
+      linkedin: "",
+      github: "",
+      photo: "",
     });
-    setAvatar(defaultAvatar);
   };
 
   return (
@@ -85,8 +77,7 @@ function App() {
       handleInputChange={handleInputChange}
       handleClickCreateCard={handleClickCreateCard}
       apiData={apiData}
-      avatar={avatar}
-      updateAvatar={updateAvatar}
+      photo={dataCard.photo}
     />
   );
 }

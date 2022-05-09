@@ -16,10 +16,10 @@ function GetAvatar(props) {
 
   const getImage = () => {
     const image = fr.result;
-    props.updateAvatar(image);
+    props.handleInputChange(image, "photo");
   };
 
-  const avatar = props.avatar === "" ? defaultAvatar : props.avatar;
+  const photo = props.photo === "" ? defaultAvatar : props.photo;
   return (
     <>
       <label
@@ -39,15 +39,14 @@ function GetAvatar(props) {
       <div
         type="text"
         className="square js__profile-preview"
-        style={{ backgroundImage: `url(${avatar})` }}
+        style={{ backgroundImage: `url(${photo})` }}
       ></div>
     </>
   );
 }
 
 GetAvatar.propTypes = {
-  avatar: PropTypes.string.isRequired,
-  updateAvatar: PropTypes.func.isRequired,
+  photo: PropTypes.string.isRequired,
 };
 
 export default GetAvatar;

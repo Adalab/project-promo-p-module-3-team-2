@@ -21,7 +21,7 @@ function CardPreview(props) {
               {props.dataCard.job || "Front-End developer"}
             </p>
           </div>
-          <Profile avatar={props.avatar} />
+          <Profile photo={props.photo} />
 
           <nav className="card__socialInfo">
             <ul className="card__socialMenu">
