@@ -47,15 +47,9 @@ function App() {
           </article>
         </div>
         <nav className='main__link'>
-          <a
-            className='main__link-cta'
-            href='./createcard.html'
-            rel='noreferrer'
-          >
-            <Link to='/cards' className='main__button'>
-              Comenzar
-            </Link>
-          </a>
+          <button className='main__link-cta'>
+            <Link to='/Cards'>Comenzar</Link>
+          </button>
         </nav>
       </main>
       <footer className='footer'>

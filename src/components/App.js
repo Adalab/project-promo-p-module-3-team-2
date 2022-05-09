@@ -74,7 +74,7 @@ function App() {
     <Routes>
       <Route path='/' element={<Landing />} />
       <Route
-        path='/cards'
+        path='/Cards'
         element={
           <Cards
             dataCard={dataCard}
