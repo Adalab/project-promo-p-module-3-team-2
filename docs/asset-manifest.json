@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.265a2971.css",
-    "main.js": "./static/js/main.b8e7c885.js",
+    "main.js": "./static/js/main.f4fc3dd5.js",
     "static/media/awesome.svg": "./static/media/awesome.a65df2b29ae175808f920215242d8683.svg",
     "static/media/mariposa.jpg": "./static/media/mariposa.3ca10046bdbf232f6183.jpg",
     "static/media/keyboard-solid.svg": "./static/media/keyboard-solid.7f279dd41a28c02487d877f048ec389b.svg",
@@ -9,10 +9,10 @@
     "static/media/share-nodes-solid.svg": "./static/media/share-nodes-solid.02f796f687f04ce77804eda64e95f751.svg",
     "index.html": "./index.html",
     "main.265a2971.css.map": "./static/css/main.265a2971.css.map",
-    "main.b8e7c885.js.map": "./static/js/main.b8e7c885.js.map"
+    "main.f4fc3dd5.js.map": "./static/js/main.f4fc3dd5.js.map"
   },
   "entrypoints": [
     "static/css/main.265a2971.css",
-    "static/js/main.b8e7c885.js"
+    "static/js/main.f4fc3dd5.js"
   ]
 }
