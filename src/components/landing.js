@@ -1,11 +1,12 @@
 import '../styles/layout/landing/_main.scss';
-import logo from '../images/logo_ninfas.png';
+import src from '../images/logo_ninfas.png';
 import logoAwesome from '../images/awesome.svg';
 import iconDesign from '../images/object-ungroup-solid.svg';
 import iconKeyboard from '../images/keyboard-solid.svg';
 import iconShare from '../images/share-nodes-solid.svg';
 import '../styles/core/_variables.scss';
 import { Link } from 'react-router-dom';
+import Footer from './Footer';
 
 function App() {
   return (
@@ -47,22 +48,17 @@ function App() {
           </article>
         </div>
         <nav className='main__link'>
-          <button className='main__link-cta'>
-            <Link to='/Cards'>Comenzar</Link>
-          </button>
+          <Link to='/Cards' className='main__link-cta'>
+            Comenzar
+          </Link>
         </nav>
       </main>
-      <footer className='footer'>
-        <small className='footer__text'>Awesome profile-cards @2018</small>
-        <a href='http://adalab.es' target='_blank' rel='noreferrer'>
-          <img
-            className='footer__logo'
-            src={logo}
-            alt='Logo Ninfas'
-            title='Logo Equipo Ninfas'
-          />
-        </a>
-      </footer>
+      <Footer
+        className='footer'
+        src={src}
+        alt='logo Ninfa'
+        title='Logo Ninfa'
+      />
     </>
   );
 }
