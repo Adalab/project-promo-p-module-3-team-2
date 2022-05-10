@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "./static/css/main.a659834c.css",
-    "main.js": "./static/js/main.922e75d0.js",
+    "main.css": "./static/css/main.151d4d79.css",
+    "main.js": "./static/js/main.d01cac8a.js",
     "static/media/awesome.svg": "./static/media/awesome.a65df2b29ae175808f920215242d8683.svg",
     "static/media/mariposa.jpg": "./static/media/mariposa.3ca10046bdbf232f6183.jpg",
     "static/media/keyboard-solid.svg": "./static/media/keyboard-solid.7f279dd41a28c02487d877f048ec389b.svg",
     "static/media/object-ungroup-solid.svg": "./static/media/object-ungroup-solid.4d3937122342884fa021c8fb9853bf27.svg",
     "static/media/share-nodes-solid.svg": "./static/media/share-nodes-solid.02f796f687f04ce77804eda64e95f751.svg",
     "index.html": "./index.html",
-    "main.a659834c.css.map": "./static/css/main.a659834c.css.map",
-    "main.922e75d0.js.map": "./static/js/main.922e75d0.js.map"
+    "main.151d4d79.css.map": "./static/css/main.151d4d79.css.map",
+    "main.d01cac8a.js.map": "./static/js/main.d01cac8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.a659834c.css",
-    "static/js/main.922e75d0.js"
+    "static/css/main.151d4d79.css",
+    "static/js/main.d01cac8a.js"
   ]
 }
