@@ -1,5 +1,5 @@
 import '../styles/layout/landing/_main.scss';
-import src from '../images/logo_ninfas.png';
+import logo from '../images/logo_ninfas.png';
 import logoAwesome from '../images/awesome.svg';
 import iconDesign from '../images/object-ungroup-solid.svg';
 import iconKeyboard from '../images/keyboard-solid.svg';
@@ -53,12 +53,7 @@ function App() {
           </Link>
         </nav>
       </main>
-      <Footer
-        className='footer'
-        src={src}
-        alt='logo Ninfa'
-        title='Logo Ninfa'
-      />
+      <Footer src={logo} />
     </>
   );
 }
