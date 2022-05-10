@@ -25,6 +25,10 @@
     display: flex;
     justify-content: flex-start;
     width: 281px;
+    cursor: pointer;
+    &:hover {
+      color: var(--dull-orange);
+    }
   }
   &__label {
     width: 281px;
@@ -78,6 +82,9 @@
   position: absolute;
   right: 20px;
   cursor: pointer;
+  &:hover {
+    color: var(--dull-orange);
+  }
 }
 .square {
   width: 30px;

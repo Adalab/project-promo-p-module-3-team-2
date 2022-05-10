@@ -14,6 +14,10 @@
   font-weight: 600;
   text-transform: uppercase;
   color: #54585a;
+  cursor: pointer;
+  &:hover {
+    color: var(--dull-orange);
+  }
 }
 
 .legend {

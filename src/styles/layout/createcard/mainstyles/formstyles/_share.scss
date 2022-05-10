@@ -25,6 +25,10 @@
     width: 281px;
     display: flex;
     justify-content: flex-start;
+    cursor: pointer;
+    &:hover {
+      color: var(--dull-orange);
+    }
   }
   &__button {
     height: 50px;
