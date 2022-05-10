@@ -37,6 +37,10 @@
       color: var(--gunmetal);
       margin-bottom: 20px;
       cursor: pointer;
+      &:hover {
+        background-color: var(--dirty-blue);
+        color: var(--white-four);
+      }
     }
     &__image {
       width: 100%;
@@ -64,6 +68,10 @@
         height: 32px;
         border-radius: 50%;
         margin-right: 10px;
+        &:hover {
+          background-color: var(--dirty-blue);
+          color: var(--white-four);
+        }
         .icon {
           position: absolute;
           left: 50%;
