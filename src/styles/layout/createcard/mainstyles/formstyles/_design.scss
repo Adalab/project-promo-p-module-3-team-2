@@ -25,8 +25,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  /* padding: 27px 0px;*/
 }
 fa-angle-up {
   position: absolute;
@@ -34,18 +32,11 @@ fa-angle-up {
   cursor: pointer;
 }
 
-/*.fa-chevron-up {
-  position: absolute;
-  right: 60px;
-}*/
 .fa-object-ungroup {
   margin-right: 10px;
   color: #e17334;
 }
-/*.container-icon {
-  display: flex;
-  align-items: center;
-}*/
+
 .paragraph {
   text-transform: uppercase;
   font-size: 14px;
@@ -60,6 +51,7 @@ fa-angle-up {
 }
 .input {
   margin-right: 15px;
+  cursor: pointer;
 }
 .design-option {
   display: flex;
@@ -212,6 +204,10 @@ fa-angle-up {
   .card__rrss--item {
     color: var(--dark-green-blue);
     border: 2px solid var(--hospital-green);
+    &:hover {
+      background-color: var(--dirty-blue);
+      color: var(--white-four);
+    }
   }
   .card__personalInfo {
     border-left: 5px solid var(--dirty-blue);
@@ -225,6 +221,10 @@ fa-angle-up {
   .card__rrss--item {
     color: var(--dried-blood);
     border: 2px solid var(--rusty-red);
+    &:hover {
+      background-color: var(--tomato);
+      color: var(--white-four);
+    }
   }
   .card__personalInfo {
     border-left: 5px solid var(--tomato);
@@ -238,6 +238,10 @@ fa-angle-up {
   .card__rrss--item {
     color: var(--slate);
     border: 2px solid var(--faded-orange);
+    &:hover {
+      background-color: var(--light-grey-blue);
+      color: var(--white-four);
+    }
   }
   .card__personalInfo {
     border-left: 5px solid var(--light-grey-blue);
@@ -251,6 +255,10 @@ fa-angle-up {
   .card__rrss--item {
     color: var(--pink);
     border: 2px solid var(--yellow);
+    &:hover {
+      background-color: var(--yellow);
+      color: var(--white-four);
+    }
   }
   .card__personalInfo {
     border-left: 5px solid var(--green);
@@ -264,6 +272,10 @@ fa-angle-up {
   .card__rrss--item {
     color: var(--blue-ocean);
     border: 2px solid var(--magenta);
+    &:hover {
+      background-color: var(--blue-ocean);
+      color: var(--white-four);
+    }
   }
   .card__personalInfo {
     border-left: 5px solid var(--green-forest);
@@ -277,6 +289,10 @@ fa-angle-up {
   .card__rrss--item {
     color: var(--lavende);
     border: 2px solid var(--sand);
+    &:hover {
+      background-color: var(--green-lime);
+      color: var(--white-four);
+    }
   }
   .card__personalInfo {
     border-left: 5px solid var(--green-lime);
