@@ -11,7 +11,7 @@ function Share(props) {
   };
   const twitterShare = (event) => {
     event.preventDefault();
-    const url = `https://twitter.com/intent/tweet?text=He%20creado%20una%20tarjeta%20con%20el%20Awesome%20profile%20cards%20del%20equipo%20Ninfas&url=${props.apiData.cardURL}`;
+    const url = `https://twitter.com/intent/tweet?text=He%20creado%20una%20tarjeta%20con%20el%20Awesome%20profile%20cards%20del%20Team%20Hook&url=${props.apiData.cardURL}`;
     window.open(url, '_blank');
   };
   const errorCard = () => {
