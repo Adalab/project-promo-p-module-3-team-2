@@ -2,13 +2,27 @@ import { useState } from 'react';
 
 function Share(props) {
   const [collapsedShare, setCollapsedShare] = useState('collapsed');
+  const [errorMessage, setErrorMessage] = useState('');
 
-  const handleCollapsedShare = (props) => {
+  const handleCollapsedShare = (ev) => {
     console.log('holaaaaa');
-    props.handleClickCreateCard();
-    setCollapsedShare('');
+    props.handleClickCreateCard(ev);
+    errorCard();
   };
-
+  const twitterShare = (event) => {
+    event.preventDefault();
+    const url = `https://twitter.com/intent/tweet?text=He%20creado%20una%20tarjeta%20con%20el%20Awesome%20profile%20cards%20del%20equipo%20Ninfas&url=${props.apiData.cardURL}`;
+    window.open(url, '_blank');
+  };
+  const errorCard = () => {
+    console.log(props.apiData);
+    if (props.apiData.success) {
+      setErrorMessage('La tarjeta ha sido creada:');
+      setCollapsedShare('');
+    } else {
+      setErrorMessage('Rellena todos los datos del formulario');
+    }
+  };
   return (
     <>
       <fieldset className='thirdFieldset'>
@@ -41,8 +55,11 @@ function Share(props) {
       </fieldset>
       <fieldset className='fourFieldset'>
         <div className={`js-fourFieldset ${collapsedShare}`}>
+          <p className='fourFieldset__link js_url_card'>{errorMessage}</p>
           <a
             href={props.apiData.cardURL}
+            target='_blank'
+            rel='noreferrer'
             title='Haz click para ir a la tarjeta creada'
             className='fourFieldset__link js_url_card'
           >
@@ -51,6 +68,7 @@ function Share(props) {
           <button
             className='fourFieldset__button js-twitterButton'
             title='Compartir en twitter'
+            onClick={twitterShare}
           >
             <i className='fa-brands fa-twitter'></i>Compartir en twitter
           </button>
