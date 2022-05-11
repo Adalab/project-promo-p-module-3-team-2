@@ -28,6 +28,7 @@ function Share(props) {
         setCollapsedShare('');
       } else {
         setErrorMessage(props.apiData.error);
+        setCollapsedShare('collapsed');
       }
     }
   };
