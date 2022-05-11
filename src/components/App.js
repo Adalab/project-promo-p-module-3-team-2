@@ -32,7 +32,8 @@ function getInitialDataCardState() {
 
 function App() {
   const [dataCard, setDataCard] = useState(getInitialDataCardState());
-  const [apiData, setApiData] = useState({});
+  const [apiData, setApiData] = useState();
+
   const handleClickCreateCard = (ev) => {
     ev.preventDefault();
     dataApi(dataCard).then((info) => {
@@ -68,6 +69,7 @@ function App() {
       github: '',
       photo: '',
     });
+    setApiData();
   };
 
   return (

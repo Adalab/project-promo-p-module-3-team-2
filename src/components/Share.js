@@ -1,28 +1,41 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 function Share(props) {
   const [collapsedShare, setCollapsedShare] = useState('collapsed');
   const [errorMessage, setErrorMessage] = useState('');
+  const [result, setResult] = useState('');
 
   const handleCollapsedShare = (ev) => {
     console.log('holaaaaa');
+    // Llama a la API
     props.handleClickCreateCard(ev);
-    errorCard();
   };
+
   const twitterShare = (event) => {
     event.preventDefault();
     const url = `https://twitter.com/intent/tweet?text=He%20creado%20una%20tarjeta%20con%20el%20Awesome%20profile%20cards%20del%20Team%20Hook&url=${props.apiData.cardURL}`;
     window.open(url, '_blank');
   };
+
   const errorCard = () => {
-    console.log(props.apiData);
-    if (props.apiData.success) {
-      setErrorMessage('La tarjeta ha sido creada:');
-      setCollapsedShare('');
+    if (!props.apiData) {
+      setCollapsedShare('collapsed');
     } else {
-      setErrorMessage('Rellena todos los datos del formulario');
+      console.log(props.apiData);
+      if (props.apiData.success) {
+        setResult('La tarjeta ha sido creada:');
+        setErrorMessage('');
+        setCollapsedShare('');
+      } else {
+        setErrorMessage(props.apiData.error);
+      }
     }
   };
+
+  // Cada vez que cambie la respuesta de la API
+  // recalculamos si hay o no algun error y lo pintamos
+  useEffect(errorCard, [props.apiData]);
+
   return (
     <>
       <fieldset className='thirdFieldset'>
@@ -50,20 +63,20 @@ function Share(props) {
           >
             <i className='fa-regular fa-address-card'></i>Crear tarjeta
           </button>
-          <h3 className='fourFieldset__title js-errorCard'></h3>
         </div>
       </fieldset>
       <fieldset className='fourFieldset'>
+        <p className='fourFieldset__link js_url_card'>{errorMessage}</p>
         <div className={`js-fourFieldset ${collapsedShare}`}>
-          <p className='fourFieldset__link js_url_card'>{errorMessage}</p>
+          <p className='fourFieldset__link js_url_card'>{result}</p>
           <a
-            href={props.apiData.cardURL}
+            href={props.apiData?.cardURL}
             target='_blank'
             rel='noreferrer'
             title='Haz click para ir a la tarjeta creada'
             className='fourFieldset__link js_url_card'
           >
-            {props.apiData.cardURL}
+            {props.apiData?.cardURL}
           </a>
           <button
             className='fourFieldset__button js-twitterButton'
