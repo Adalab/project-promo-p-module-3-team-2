@@ -1,4 +1,14 @@
+import { useState } from 'react';
+
 function Share(props) {
+  const [collapsedShare, setCollapsedShare] = useState('collapsed');
+
+  const handleCollapsedShare = (props) => {
+    console.log('holaaaaa');
+    props.handleClickCreateCard();
+    setCollapsedShare('');
+  };
+
   return (
     <>
       <fieldset className='thirdFieldset'>
@@ -22,7 +32,7 @@ function Share(props) {
           <button
             className='thirdFieldset__button js-thirdFieldset__button js_create_button'
             title='Crear tarjeta'
-            onClick={props.handleClickCreateCard}
+            onClick={handleCollapsedShare}
           >
             <i className='fa-regular fa-address-card'></i>Crear tarjeta
           </button>
@@ -30,7 +40,7 @@ function Share(props) {
         </div>
       </fieldset>
       <fieldset className='fourFieldset'>
-        <div className='js-fourFieldset '>
+        <div className={`js-fourFieldset ${collapsedShare}`}>
           <a
             href={props.apiData.cardURL}
             title='Haz click para ir a la tarjeta creada'
@@ -38,7 +48,6 @@ function Share(props) {
           >
             {props.apiData.cardURL}
           </a>
-
           <button
             className='fourFieldset__button js-twitterButton'
             title='Compartir en twitter'
