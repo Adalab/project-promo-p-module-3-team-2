@@ -36,7 +36,7 @@ function Share(props) {
             title='Haz click para ir a la tarjeta creada'
             className='fourFieldset__link js_url_card'
           >
-            {props.apiData.URL}
+            {props.apiData.cardURL || 'url'}
           </a>
 
           <button
