@@ -30,13 +30,13 @@ function Share(props) {
         </div>
       </fieldset>
       <fieldset className='fourFieldset'>
-        <div className='js-fourFieldset collapsed'>
+        <div className='js-fourFieldset '>
           <a
-            href=''
+            href={props.apiData.cardURL}
             title='Haz click para ir a la tarjeta creada'
             className='fourFieldset__link js_url_card'
           >
-            {props.apiData.URL}
+            {props.apiData.cardURL}
           </a>
 
           <button
